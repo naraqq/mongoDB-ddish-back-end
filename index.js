@@ -9,8 +9,6 @@ const bodyParser = require("body-parser");
 
 //! MONGOOSE SECTION
 
-//* WHAT IS MONGOOSE ?
-
 //! MONGOOSE SECTION
 
 
@@ -52,7 +50,6 @@ app.delete("/list/:id", async (req, res) => {
 //UPDATE REQUEST
 app.put("/list/:id", async (req, res) => {
   const { id } = req.params;
-  console.log(req.body)
   MyList.findByIdAndUpdate(
     id, req.body, (err, result) => {
     if (err) {

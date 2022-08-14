@@ -14,4 +14,13 @@ const ListSchema = new mongoose.Schema({
 
 const MyList = mongoose.model("List", ListSchema);
 
+//String
+//Number
+//Date
+//Boolean
+//Buffer
+//ObjectId
+//Mixed
+//Array
+
 module.exports = { MyList };
