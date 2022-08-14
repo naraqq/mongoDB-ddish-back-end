@@ -9,12 +9,7 @@ const bodyParser = require("body-parser");
 
 //! MONGOOSE SECTION
 
-const mongoose = require("mongoose");
-mongoose
-  .connect(process.env.ATLAS_CONNECTION_URL, { useNewUrlParser: true })
-  .then(() => console.log("Database connected successfully !"))
-    .catch((err) => console.log(err));
-    const { MyList } = require("./model");
+//* WHAT IS MONGOOSE ?
 
 //! MONGOOSE SECTION
 
@@ -28,9 +23,9 @@ app.use(bodyParser.json());
 
 // GET REQUEST
 app.get("/", async (req, res) => {
-    return res.json({ message: "Thanks for being here ✌️" });
+    return res.json({ message: "Node server ажиллаж байна. ✌️" });
 });
-  
+
 app.get("/list", async (req, res) => {
     const allList = await MyList.find();
     return res.status(200).json(allList);
