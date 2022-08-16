@@ -20,8 +20,8 @@ MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
   db = client.db(dbName)
   console.log(`Connected MongoDB: ${url}`)
   console.log(`Database: ${dbName}`)
-  const {MyList} = require("./model")
 })
+const {MyList} = require("./model")
 
 //! MONGOOSE SECTION
 
