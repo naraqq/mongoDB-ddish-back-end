@@ -9,17 +9,17 @@ const bodyParser = require("body-parser");
 
 //! MONGOOSE SECTION
 
-const mongoose = require("mongoose");
-mongoose.connect(process.env.ATLAS_CONNECTION_URL)
-  .then(
-    () => {
-      console.log("Database connected successfully !")
-  }
-)
-  .catch((err) => {
-  console.log(err)
-})
-const { MyList } = require("./model")
+// const mongoose = require("mongoose");
+// mongoose.connect(process.env.ATLAS_CONNECTION_URL)
+//   .then(
+//     () => {
+//       console.log("Database connected successfully !")
+//   }
+// )
+//   .catch((err) => {
+//   console.log(err)
+// })
+// const { MyList } = require("./model")
 //! MONGOOSE SECTION
 
 
