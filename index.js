@@ -2,13 +2,24 @@ const express = require("express");
 require('dotenv').config();
 const app = express();
 const cors = require("cors");
-const PORT = process.env.PORT
+const PORT = 5000
 const bodyParser = require("body-parser");
 
 
 
 //! MONGOOSE SECTION
 
+const mongoose = require("mongoose");
+mongoose.connect(process.env.ATLAS_CONNECTION_URL)
+  .then(
+    () => {
+      console.log("Database connected successfully !")
+  }
+)
+  .catch((err) => {
+  console.log(err)
+})
+const { MyList } = require("./model")
 //! MONGOOSE SECTION
 
 
@@ -60,4 +71,5 @@ app.put("/list/:id", async (req, res) => {
     }
   });
 });
+
 //UPDATE REQUEST
