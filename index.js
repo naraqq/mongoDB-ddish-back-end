@@ -7,10 +7,11 @@ const bodyParser = require("body-parser");
 
 
 
+
 //! MONGOOSE SECTION
 
 const mongoose = require("mongoose");
-mongoose.connect("mongodb://http://192.168.0.13:27017/test")
+mongoose.connect("http://192.168.0.13:27017/test")
   .then(
     () => {
       console.log("Database connected successfully !")
