@@ -7,7 +7,7 @@ const bodyParser = require("body-parser");
 
 
 const MongoClient = require('mongodb').MongoClient
-const url = 'mongodb://192.168.0.13:27017/test'
+const url = 'mongodb://192.168.0.13:27017'
 const dbName = 'test'
 let db
 
