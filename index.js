@@ -6,23 +6,21 @@ const PORT = 5000
 const bodyParser = require("body-parser");
 
 
-const MongoClient = require('mongodb').MongoClient
-const url = 'mongodb://127.0.0.1:27017'
-const dbName = 'test'
-let db
-
 
 
 //! MONGOOSE SECTION
 
-MongoClient.connect(url, { useNewUrlParser: true }, (err, client) => {
-  if (err) return console.log(err)
-  db = client.db(dbName)
-  console.log(`Connected MongoDB: ${url}`)
-  console.log(`Database: ${dbName}`)
+const mongoose = require("mongoose");
+mongoose.connect("mongodb://127.0.0.1:27017/test", {useNewUrlParser: true})
+  .then(
+    () => {
+      console.log("Database connected successfully !")
+  }
+)
+  .catch((err) => {
+  console.log(err)
 })
-const {MyList} = require("./model")
-
+const { MyList } = require("./model")
 //! MONGOOSE SECTION
 
 
